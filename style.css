@@ -1,0 +1,950 @@
+/* Polices d'écriture du site */
+
+@font-face {
+  font-family: 'robotoregular';
+  src: url('font/Roboto-Regular-webfont.eot');
+  src: url('font/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('font/Roboto-Regular-webfont.woff2') format('woff2'), url('font/Roboto-Regular-webfont.woff') format('woff'), url('font/Roboto-Regular-webfont.ttf') format('truetype'), url('font/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'robotobold';
+  src: url('font/Roboto-Bold-webfont.eot');
+  src: url('font/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('font/Roboto-Bold-webfont.woff2') format('woff2'), url('font/Roboto-Bold-webfont.woff') format('woff'), url('font/Roboto-Bold-webfont.ttf') format('truetype'), url('font/Roboto-Bold-webfont.svg#robotobold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'robotomedium';
+  src: url('font/Roboto-Medium-webfont.eot');
+  src: url('font/Roboto-Medium-webfont.eot?#iefix') format('embedded-opentype'), url('font/Roboto-Medium-webfont.woff2') format('woff2'), url('font/Roboto-Medium-webfont.woff') format('woff'), url('font/Roboto-Medium-webfont.ttf') format('truetype'), url('font/Roboto-Medium-webfont.svg#robotomedium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'robotoblack';
+  src: url('font/Roboto-Black-webfont.eot');
+  src: url('font/Roboto-Black-webfont.eot?#iefix') format('embedded-opentype'), url('font/Roboto-Black-webfont.woff2') format('woff2'), url('font/Roboto-Black-webfont.woff') format('woff'), url('font/Roboto-Black-webfont.ttf') format('truetype'), url('font/Roboto-Black-webfont.svg#robotoblack') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Règles de la page */
+body {
+  /* position de la page */
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* police d'écriture, couleur et couleur de fond par défaut */
+  font-family: 'robotoregular', Arial, sans-serif;
+  color: grey;
+  background: white;
+}
+
+
+/* ------------ Header ------------ */
+
+
+/* Règles du Bandeau (header)*/
+#bandeau {
+  display: flex;
+  /* fixe le header toujours visible */
+  position: fixed;
+  /* espace entre logo et menu nav */
+  justify-content: space-between;
+  /* centre les éléments au même niveau */
+  align-items: center;
+  /* dimensions du bandeau et couleur de fond */
+  width: 100%;
+  height: 90px;
+  /* couleur du fond */
+  background: white;
+  /* règle de priorité d'affichage */
+  z-index: 10;
+}
+
+
+/* Taille et position du logo */
+#logo {
+  display: flex;
+  width: 230px;
+  margin: 10%;
+}
+
+
+/* Bouton du menu navigation */
+.menu_toggle {
+  /* non affiché en taille d'écran normal */
+  display: none;
+}
+
+
+/* Check du bouton de navigation */
+#toggle {
+  /* non affiché en taille d'écran normal */
+  display: none;
+}
+
+
+/* Règles du Menu navigateur */
+#menu {
+  /* position du menu et taille de police */
+  margin-right: 15%;
+  font-size: 0.8em;
+}
+
+#menu ul {
+  /* mettre en ligne la liste */
+  display: flex;
+  padding-left: 0;
+  /* enlève les puces */
+  list-style-type: none;
+}
+
+#menu li {
+  /* espace entre les liens */
+  margin: 10px;
+}
+
+#menu a {
+  /* enlève la barre du lien */
+  text-decoration: none;
+  /* couleur des liens */
+  color: grey;
+}
+
+
+/* Action survol du lien avec la souris */
+#menu a:hover {
+  /* affichage d'une barre bleu en haut */
+  margin-top: 0;
+  padding-top: 33px;
+  border-top: 5px solid rgb(52, 145, 178);
+  /* couleur du lien noir */
+  color: black;
+}
+
+
+/* ------------ Slider ------------ */
+
+
+/* Règles du slider */
+#slider {
+  /*position du slider */
+  position: relative;
+  padding-top: 90px;
+  /* taille du slider */
+  width: 100%;
+  /* cache les éléments qui dépassent */
+  overflow: hidden;
+}
+
+
+/* Règles de l'animation "glisse" */
+@keyframes glisse {
+  0% {
+    margin-left: 0;
+  }
+  33% {
+    margin-left: 0;
+  }
+  66% {
+    margin-left: -100%;
+  }
+  100% {
+    margin-left: -100%;
+  }
+}
+
+
+/* Target des commandes du slider */
+#slider span {
+  /* N'affiche pas l'ancre */
+  display: none;
+}
+
+
+/* Comandes du slider */
+.commandes {
+  /* transforme les commandes en boutons */
+  display: block;
+  /* taille des commandes */
+  width: 65px;
+  height: 65px;
+  /* couleur et mise en page des boutons */
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  text-align: center;
+  line-height: 65px;
+  font-size: 1.1em;
+}
+
+
+/* Position du bouton gauche + arrondie des bordures */
+.left {
+  position: absolute;
+  top: 50%;
+  left: -35px;
+  border-radius: 0 50% 50% 0;
+}
+
+
+/* Position du bouton droit + arrondie des bordures */
+.right {
+  position: absolute;
+  top: 50%;
+  right: -35px;
+  border-radius: 50% 0 0 50%;
+}
+
+/* Position du chevron dans le bouton */
+.fa-chevron-left {
+  position: relative;
+  left: 20%;
+}
+
+.fa-chevron-right {
+  position: relative;
+  right: 20%;
+}
+
+
+/* Actions des boutons */
+#sl_right:target~.slider_inner {
+  margin-left: -100%;
+}
+
+#sl_left:target~.slider_inner {
+  margin-left: 0;
+}
+
+
+/* Conteneur du slider */
+.slider_inner {
+  /* disposition en ligne */
+  display: flex;
+  /* taille du conteneur */
+  width: 200%;
+  /* animation "glisse" du slider au chargement de la page*/
+  animation: glisse 10s;
+  /* animation des boutons du sliser */
+  transition: all 1s ease;
+}
+
+
+/* Enlève les marges entre les photos */
+.slide {
+  margin: 0;
+}
+
+
+/* Taille des images du slider */
+.image_slide {
+  width: 100%;
+}
+
+
+/* Mise en page texte d'intro */
+.slider_inner figcaption {
+  /* mise en page en colonne */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* cache ce qui dépasse du cadre d'affichage*/
+  overflow: hidden;
+  /* taille du cadre d'affichage */
+  width: 40%;
+  height: 70%;
+  /* couleur de la police */
+  color: white;
+  /* animation "glisse" de l'intro aller-retour en continu */
+  animation: glisse 10s alternate infinite;
+}
+
+
+/* Couleur du nom de l'agence dans le texte d'intro */
+.titre strong {
+  color: rgb(52, 145, 178);
+}
+
+
+/* Police des titres des textes du slider */
+.titre {
+  font-family: 'robotomedium';
+  font-size: 1.9em;
+  margin: 0;
+}
+
+
+/* Position du texte d'intro 1 */
+#texte1 {
+  position: absolute;
+  top: 30%;
+  left: 11%;
+}
+
+
+/* Position du texte d'intro 2 */
+#texte2 {
+  position: absolute;
+  top: 30%;
+  left: 111%;
+}
+
+
+/* Taille de la police des textes du sliders */
+.phrase_intro {
+  font-size: small;
+}
+
+
+/* Boutons infos et contact du slider */
+.bouton_infos {
+  /* taille du bouton */
+  width: 110px;
+  height: 35px;
+  /* position du bouton */
+  margin-top: 3px;
+  /* bordures du bouton */
+  border: 1px solid rgb(92, 173, 211);
+  border-bottom: 3px solid rgb(52, 145, 178);
+  border-radius: 4px;
+  /* enlève le soulignement du lien */
+  text-decoration: none;
+  /* transforme le lien en bouton */
+  display: block;
+  /* couleur du bouton */
+  background: rgb(92, 173, 211);
+  /* couleur du texte */
+  color: white;
+  /* centrage du texte en hauteur */
+  line-height: 35px;
+  /* centrage du texte */
+  text-align: center;
+}
+
+
+/* Effet transparence au survol de la souris */
+.bouton_infos:hover {
+  opacity: 0.9;
+}
+
+
+/* ------------ Règles communes de la section Services et Projets ------------ */
+
+
+/* Icône du cercle de l'interligne */
+.fa-circle {
+  position: relative;
+  bottom: 21px;
+  color: rgb(92, 173, 211);
+  border: 4px solid white;
+  border-radius: 50%;
+}
+
+
+/* Ligne grise de l'interligne */
+hr {
+  width: 150px;
+  border: 1px solid #ebebeb;
+}
+
+
+/* Mise en page des introductions */
+.introduction h2 {
+  margin: 1%;
+  color: black;
+  font-family: 'robotobold';
+  font-size: 2.5em;
+}
+
+.introduction p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.introduction {
+  padding: 20px;
+}
+
+
+/* ------------ Services ------------*/
+
+
+/* Règles de la section services */
+#services {
+  /* position de la section */
+  position: relative;
+  top: 30px;
+  /* taille de la section */
+  width: 100%;
+  padding-top: 90px;
+  padding-bottom: 50px;
+  /* affichage du contenu en colonne centré */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+/* Règles de la partie description */
+.description {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  margin-top: 40px;
+  padding: 20px;
+  justify-content: space-around;
+  font-size: 0.9em;
+}
+
+
+/* Taille de l'image de l'écran */
+.ecran {
+  width: 510px;
+  height: 319px;
+}
+
+
+/* Couleur des titres de la description */
+.description h3 {
+  color: black;
+}
+
+
+/* Mise en page des la liste des descriptions */
+.services_list {
+  /*affichage en colonne espacés */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* Taille de la partie descriptifs */
+  width: 510px;
+  height: 344px;
+  /* alignement du texte a gauche */
+  text-align: left;
+}
+
+
+/* Mise en page de chaque descriptions */
+.design {
+  display: flex;
+  flex-direction: column;
+  /* taille */
+  height: 80px;
+}
+
+.design h3 {
+  margin: 2px;
+  font-family: 'robotomedium';
+}
+
+.design p {
+  margin: 2px;
+  font-size: 0.9em;
+}
+
+
+/* Icones des descriptions */
+.icones {
+  /* position de des icônes */
+  position: relative;
+  right: 75px;
+  bottom: 65px;
+  color: rgb(52, 145, 178);
+}
+
+
+/* Mise en page des icones */
+.fa-chart-line, .fa-cubes, .fa-chart-pie {
+  font-size: 1.7em;
+  padding: 15px;
+  /* cercle de l'icone */
+  border: 2px solid #ebebeb;
+  border-radius: 50%;
+}
+
+
+/* Taille de l'icone "camembert" */
+.fa-chart-pie {
+  height: 24px;
+  width: 24.5px;
+}
+
+
+/* Mise en page du petit cercle */
+.icones .fa-circle {
+  /* position du petit cercle */
+  position: relative;
+  bottom: 40px;
+  left: 48px;
+  /* bordure et taille */
+  border: 4px solid white;
+  border-radius: 50%;
+  font-size: 0.8em;
+}
+
+
+/* ------------ Projets ------------ */
+
+
+/* Règles de la section projets */
+#projets {
+  /* position de la section */
+  position: relative;
+  top: 30px;
+  /* taille */
+  width: 100%;
+  /* affichage en colonne centrés */
+  display: flex;
+  flex-direction: column;
+  /* mise en page */
+  text-align: center;
+  padding-top: 90px;
+  padding-bottom: 50px;
+  background-color: rgb(245, 245, 245);
+}
+
+
+/* Mise en page centré du menu portfolio */
+.menu_folio {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.menu_folio ul {
+  display: flex;
+  /* taille */
+  width: 360px;
+  padding: 0;
+  /* enlève les puces des liens */
+  list-style-type: none;
+  /* mise en page */
+  border-radius: 5px;
+  font-size: 0.93em;
+  background-color: rgb(229, 229, 229);
+}
+
+/* Taile des boutons */
+.menu_folio li {
+  width: 90px;
+  height: 40px;
+  margin: 0;
+}
+
+/* Mise en page du texte */
+.menu_folio a {
+  /* transforme les liens en boutons */
+  display: block;
+  /* enlève la ligne des liens */
+  text-decoration: none;
+  color: grey;
+  /* centre verticalement le texte */
+  line-height: 40px;
+}
+
+
+/* mise en page de la flèche des boutons */
+.fa-caret-down {
+  /* cache la flèche */
+  visibility: hidden;
+  /* position */
+  position: relative;
+  bottom: 15px;
+  /* mise en page */
+  color: rgb(52, 145, 178);
+  font-size: 1.2em;
+}
+
+/* Mise en page des boutons au survol de la souris */
+.menu_folio a:hover {
+  /* taille */
+  width: 100%;
+  height: 100%;
+  /* couleurs de selection */
+  background-color: rgb(92, 173, 211);
+  color: white;
+  border-bottom: 3px solid rgb(52, 145, 178);
+  border-radius: 5px;
+}
+
+.menu_folio a:hover .fa-caret-down {
+  visibility: visible;
+}
+
+
+/* Partie portfolio */
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/*Taille des conteneur d'images */
+.image_folio {
+  margin: 20px;
+  height: 166px;
+}
+
+/* Taille des images */
+.image_folio img {
+  width: 250px;
+}
+
+/* Mise en page des legendes des images */
+.legende {
+  /* cache la légende */
+  visibility: hidden;
+  /* taille */
+  width: 250px;
+  height: 90px;
+  /* position */
+  position: relative;
+  bottom: 57%;
+  /* mise en page */
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+/* Affichage de la légende au survol de l'image */
+figure:hover figcaption {
+  visibility: visible;
+}
+
+
+/* Mise en page du texte des légendes */
+.image_folio h4 {
+  margin: 0;
+  padding: 15px 15px 5px 15px;
+}
+
+.image_folio p {
+  height: 54px;
+  margin: 0;
+  padding: 0px 15px 0 15px;
+  font-size: 0.87em;
+}
+
+/* Mise en page de l'icone "oeil" */
+.fa-eye {
+  /*position */
+  position: relative;
+  bottom: 110px;
+  left: 80%;
+  /* mise en page */
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: rgb(92, 173, 211);
+  text-align: center;
+  color: white;
+  font-size: 0.9em
+}
+
+
+/* ------------ Contact ------------ */
+
+
+/* Position et taille du footer */
+#contact {
+  position: relative;
+  top: 30px;
+  height: 560px;
+  padding-top: 90px;
+  background-color: rgb(245, 245, 245);
+}
+
+
+/* Taille de la map adapté à l'écran */
+#contact iframe {
+  width: 100%;
+}
+
+
+/* Mise en page du voile bleu contenant le formulaire */
+.formulaire {
+  /* position de formulaire */
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* taille du voile adapté à la map */
+  width: 100%;
+  height: 560px;
+  /* Couleur du voile sur la map */
+  background-color: rgba(92, 173, 211,0.3);
+}
+
+
+/* Mise en page du formulaire */
+.champs {
+  /* taille du formulaire */
+  width: 294px;
+  height: 450px;
+  /* ajustement de la position du formulaire */
+  margin-right: 10%;
+  /* mise en page des champs */
+  padding: 12px;
+  /* couleur de fond et suppression des bordures */
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 0;
+}
+
+
+/* Supprime le titre du formulaire */
+.champs legend {
+  display: none;
+}
+
+
+/* Mise en page du titre */
+.champs h2 {
+  font-family: 'robotomedium';
+  color: black;
+  margin: 6px;
+  font-size: 1.3em;
+}
+
+
+/* Mise en gras du nom de l'agence */
+.champs strong {
+  font-family: 'robotomedium';
+}
+
+
+/* Ajustement de la police du texte */
+.champs p {
+  font-size: 0.8em;
+  margin: 8px;
+}
+
+
+/* Mise en page des champs */
+.champs input, textarea {
+  /* taille des champs */
+  width: 270px;
+  margin: 6px;
+  padding: 5px;
+  /* mise en page des bordures */
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 4px;
+  /* police des champs */
+  color: rgb(105, 105, 105);
+  font-family: 'robotomedium';
+  font-size: 0.8em;
+}
+
+
+/* Mise en page du bouton "envoyer" */
+#envoyer {
+  /* taille du bouton */
+  width: 100px;
+  /* mise en page des bordures et du fond */
+  border: 1px solid rgb(92, 173, 211);
+  border-bottom: 3px solid rgb(52, 145, 178);
+  border-radius: 4px;
+  background: rgb(92, 173, 211);
+  /* couleur du texte */
+  color: white;
+}
+
+
+/* ------------ Règles pour les écrans de largeur max 720 px ------------ */
+
+
+@media screen and (max-width: 720px) {
+
+
+/* ------------ Header ------------ */
+
+  /* Hauteur du bandeau */
+  #bandeau {
+    height: 55px;
+  }
+
+
+  /* Ajustement hauteur des pages à la banière */
+  #slider, #services, #projets, #contact {
+    padding-top: 55px;
+  }
+
+
+  /* Eléments supprimés */
+  .icones, .ecran, .champs h2 {
+    display: none;
+  }
+
+
+  /* Bouton de navigation */
+  .menu_toggle {
+    /* position du bouton */
+    position: relative;
+    right: -40%;
+    /* bouton */
+    display: block;
+    /* changement affichage curseur */
+    cursor: pointer;
+    /* taille du bouton */
+    width: 40px;
+    /* Police du texte */
+    font-size: 3em;
+    /* centrer le texte du bouton */
+    text-align: center;
+  }
+
+
+  /* Affichage du menu en cliquant sur le bouton */
+  #toggle:checked+.menu_nav {
+    display: block;
+  }
+
+
+  /* Caractéristique du menu navigation */
+  #menu {
+    /* position du menu */
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    /* taille du menu */
+    width: 35%;
+  }
+
+
+  /* Mise en page des liens dans le menu navigation */
+  #menu ul {
+    display: none;
+    margin: 0;
+    /* centrer le texte */
+    text-align: center;
+    /* couleur de fond */
+    background: white;
+    /* transparence du fond */
+    opacity: 0.9;
+  }
+
+
+  /* Espacement des liens entre eux */
+  #menu li {
+    margin: 0;
+    padding: 8px;
+  }
+
+
+  /* Affichage au survol de la souris */
+  #menu a:hover {
+    /* effacement de l'ancien effet */
+    border-top: 0;
+    padding-top: 0;
+    /* couleur du fond */
+    background-color: rgb(92, 173, 211);
+    /* couleur du texte */
+    color: white;
+  }
+
+
+  /* Transforme les liens en bouton */
+  #menu a {
+    display: block;
+  }
+
+
+/* ------------ Slider ------------ */
+
+
+  /* Ajustement position et taille du texte du slider */
+  .slider_inner figcaption {
+    top: 30%;
+  }
+
+  .titre {
+    font-size: 1.4em;
+  }
+
+  .bouton_infos {
+    width: 80px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 0.7em;
+  }
+
+/* ------------ Services et Projets ------------ */
+
+  /* Ajustement police */
+  .introduction p {
+    font-size: 0.8em;
+  }
+
+
+/* ------------ Contact ------------ */
+
+  /* Centre le formulaire */
+  .formulaire {
+    justify-content: center;
+  }
+
+
+  /* Affiche le titre du formulaire */
+  .champs legend {
+    display: inherit;
+    font-family: 'robotomedium';
+    color: black;
+    margin: 6px;
+    font-size: 1.3em;
+  }
+
+
+  /* Mise en page du formulaire (bordures et couleur du fond) */
+  .champs {
+    margin: 0;
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+}
+
+
+
+/* ------------ Règles pour les écrans de largeur max 450px ------------ */
+
+
+@media screen and (max-width: 635px) {
+
+
+/* ------------ Slider ------------ */
+
+  /* Taille de la police */
+  .titre {
+    font-size: 0.9em;
+  }
+
+  .phrase_intro {
+    font-size: 0.7em;
+  }
+
+  /* Supprime les boutons du slider */
+  .bouton_infos {
+    display: none;
+  }
+
+
+/* ------------ Projets ------------ */
+
+  /* Ajustement de la taille du menu portfolio */
+  .menu_folio ul {
+    width: 300px;
+  }
+
+}
