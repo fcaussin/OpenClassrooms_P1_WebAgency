@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Webagency, la solution pour la création et l'optimisation de vos sites. Design responsive UI UX et référencement SEO.">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
+  <link rel="icon" href="images/ico/favicon.ico">
+  <title>WEBAGENCY: L'agence de tous vos projets !</title>
+</head>
+
+<body>
+
+
+  <!--************** header **************-->
+  <header id="bandeau">
+
+    <!-- logo webagency -->
+    <figure id="logo">
+      <img src="images/logo.png" alt="logo webagency" />
+    </figure>
+
+    <!-- Menu navigation -->
+    <nav id="menu">
+      <!-- Bouton du Menu de navigation -->
+      <label class="menu_toggle" for="toggle">&#9776;</label>
+      <input type="checkbox" id="toggle" />
+      <!-- Lien du menu navigation -->
+      <ul class="menu_nav">
+        <li><a href="#slider">Accueil</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projets">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+
+  <!--************** Slider  **************-->
+  <section id="slider">
+
+    <!-- Target des commandes du slider -->
+    <span id="sl_right" class="sl_command"></span>
+    <span id="sl_left" class="sl_command"></span>
+
+    <!-- Conteneur du slider -->
+    <div class="slider_inner">
+
+      <!-- Image 1 du slider -->
+      <figure class="slide">
+        <img class="image_slide" src="images/slider/bg1.jpg" alt="photo1" />
+        <!-- Intro de l'image 1 -->
+        <figcaption id="texte1">
+          <h1 class="titre"><strong>WEBAGENCY</strong> : L'AGENCE DE TOUS VOS PROJETS !</h1>
+          <p class="phrase_intro">Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>
+          <a class="bouton_infos" href="#services">Plus d'infos</a>
+        </figcaption>
+      </figure>
+
+      <!-- Image 2 du slider -->
+      <figure class="slide">
+        <img class="image_slide" src="images/slider/bg2.jpg" alt="photo2" />
+        <!-- Intro de l'image 2 -->
+        <figcaption id="texte2">
+          <h1 class="titre"><strong>WEBAGENCY</strong> : L'AGENCE DE TOUS VOS PROJETS !</h1>
+          <p class="phrase_intro">N'hésitez plus et contactez-nous !</p>
+          <a class="bouton_infos" href="#contact">Contact</a></figcaption>
+      </figure>
+    </div>
+
+    <!-- Commandes du slider -->
+    <a class="commandes left" href="#sl_left"><i class="fas fa-chevron-left"></i></a>
+    <a class="commandes right" href="#sl_right"><i class="fas fa-chevron-right"></i></a>
+
+  </section>
+
+
+  <!--************** Service **************-->
+  <section id="services">
+
+    <!-- Intro de la section Services -->
+    <div class="introduction">
+      <h2>NOS SERVICES</h2>
+      <hr />
+      <i class="fas fa-circle"></i>
+      <p>Notre agence web est spécialisée dans la création de sites internet intelligents, conçus pour accrocher et séduire vos clients !
+        <br /> Webagency vous accompagne et contribue au développement de votre visibilité et donc, de votre business.</p>
+    </div>
+
+    <!-- Descriptions + images de la section service -->
+    <div class="description">
+
+      <!-- Image services -->
+      <img class="ecran " src="images/ecran.png" alt="ecran d'ordinateur" />
+
+      <!-- Descriptions -->
+      <div class="services_list">
+        <div class="design">
+          <h3>UX design</h3>
+          <p>Nous mettons en place toute la méthodologie UX pour créer la meilleure expérience pour vos utilisateurs.</p>
+          <div class="icones"><i class="fas fa-chart-line"></i><br/><i class="fas fa-circle"></i></div>
+        </div>
+
+        <div class="design">
+          <h3>UI design</h3>
+          <p>Nous réalisons les interfaces graphiques et visuelles de votre projet, pour un rendu moderne et intuitif.</p>
+          <div class="icones"><i class="fas fa-cubes"></i><br /><i class="fas fa-circle"></i></div>
+        </div>
+
+        <div class="design">
+          <h3>SEO</h3>
+          <p>Nous optimisons le référencement de votre site afin d'améliorer sa visibilité et son nombre de visiteurs.</p>
+          <div class="icones"><i class="fas fa-chart-pie"></i><br /><i class="fas fa-circle"></i></div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!--************** Projets **************-->
+  <section id="projets">
+
+    <!-- Introduction de la section Projets -->
+    <div class="introduction">
+      <h2>NOS PROJETS</h2>
+      <hr />
+      <i class="fas fa-circle"></i>
+      <p>Découvrez notre portefeuille de compétences.
+        <br /> Un espace entièrement composé d'images à la découverte de nos plus belles réalisations.</p>
+
+      <!-- Menu navigation portfolio -->
+      <nav class="menu_folio">
+        <ul>
+          <li><a href="#projets">All Works<br /><i class="fas fa-caret-down"></i></a></li>
+          <li><a href="#projets">Creative<br /><i class="fas fa-caret-down"></i></a></li>
+          <li><a href="#projets">Corporate<br /><i class="fas fa-caret-down"></i></a></li>
+          <li><a href="#projets">Portfolio<br /><i class="fas fa-caret-down"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Images du portfolio -->
+    <div class="portfolio">
+
+      <!-- Image portfolio 1 -->
+      <figure class="image_folio">
+        <img src="images/portfolio/image1.jpg" alt="opticien" />
+        <figcaption class="legende">
+          <h4>Optical Moustache</h4>
+          <p>Vente de lunettes en ligne.</p>
+          <i class="fas fa-eye"></i>
+        </figcaption>
+      </figure>
+
+      <!-- Image portfolio 2 -->
+      <figure class="image_folio">
+        <img src="images/portfolio/image2.jpg" alt="cadeaux" />
+        <figcaption class="legende">
+          <h4>Shop Lapin</h4>
+          <p>Créateur d'objets cadeaux originaux.</p>
+          <i class="fas fa-eye"></i>
+        </figcaption>
+      </figure>
+
+      <!-- Image portfolio 3 -->
+      <figure class="image_folio">
+        <img src="images/portfolio/image3.jpg" alt="pompadour" />
+        <figcaption class="legende">
+          <h4>Pompadour</h4>
+          <p>Marque de vêtements de prêt à porter.</p>
+          <i class="fas fa-eye"></i>
+        </figcaption>
+      </figure>
+
+      <!-- Image portfolio 4 -->
+      <figure class="image_folio">
+        <img src="images/portfolio/image4.jpg" alt="logistic" />
+        <figcaption class="legende">
+          <h4>Logistics in Peace </h4>
+          <p>Entreprise de logistique, transport et stockage.</p>
+          <i class="fas fa-eye"></i>
+        </figcaption>
+      </figure>
+
+      <!-- Image portfolio 5 -->
+      <figure class="image_folio">
+        <img src="images/portfolio/image5.jpg" alt="mode" />
+        <figcaption class="legende">
+          <h4>A Vos Sacs</h4>
+          <p>Boutique de mode en ligne.</p>
+          <i class="fas fa-eye"></i>
+        </figcaption>
+      </figure>
+
+      <!-- Image portfolio 6 -->
+      <figure class="image_folio">
+        <img src="images/portfolio/image6.jpg" alt="voyage" />
+        <figcaption class="legende">
+          <h4>Hello World</h4>
+          <p>Agence de voyage.</p>
+          <i class="fas fa-eye"></i>
+        </figcaption>
+      </figure>
+
+      <!-- Image portfolio 7 -->
+      <figure class="image_folio">
+        <img src="images/portfolio/image7.jpg" alt="rocket" />
+        <figcaption class="legende">
+          <h4>Screen Rocket</h4>
+          <p>Editeur de jeux vidéo.</p>
+          <i class="fas fa-eye"></i>
+        </figcaption>
+      </figure>
+
+      <!-- Image portfolio 8 -->
+      <figure class="image_folio">
+        <img src="images/portfolio/image8.jpg" alt="fourniture" />
+        <figcaption class="legende">
+          <h4>Be Theme</h4>
+          <p>Fournitures de bureau haut de gamme.</p>
+          <i class="fas fa-eye"></i>
+        </figcaption>
+      </figure>
+    </div>
+
+  </section>
+
+
+  <!--************** Contact **************-->
+  <footer id="contact">
+
+    <!-- Map -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5248.413437647541!2d2.350510943336355!3d48.87333566710073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e145cb52f15%3A0x4d3ec41b2cadff0!2s25+Rue+d&#39;Hauteville%2C+75010+Paris!5e0!3m2!1sfr!2sfr!4v1519824026868"
+      width="1280" height="555" style="border:0" allowfullscreen></iframe>
+
+    <!-- Section formulaire -->
+    <form class="formulaire" action="index.html" method="post">
+      <!-- Regroupe les champs du formulaire -->
+      <fieldset class="champs">
+        <!-- titre du formulaire -->
+        <legend>Contact Info</legend>
+
+        <!-- Présentation -->
+        <h2>Contact Info</h2>
+        <p><strong>WebAgency SAS</strong><br /> 25 Rue d'Hauteville 75010 Paris<br /> <u>Tel:</u> 01 02 03 04 05</p>
+        <!-- Champs "nom" -->
+        <input type="text" name="nom" size="38" placeholder="Nom"><br />
+        <!-- Champs "Email" -->
+        <input type="email" name="mail" size="38" placeholder="Email"><br />
+        <!-- Champs "objet" -->
+        <input type="text" name="objet" size="38" placeholder="Objet"><br />
+        <!-- Champs "saisie de texte" -->
+        <textarea name="message" rows="8" cols="26" placeholder="Message"></textarea><br />
+        <!-- Bouton "Envoyer" -->
+        <input type="submit" name="envoyer" id="envoyer" value="Envoyer">
+      </fieldset>
+    </form>
+  </footer>
+
+</body>
+
+</html>
